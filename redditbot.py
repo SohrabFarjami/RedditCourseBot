@@ -11,7 +11,7 @@ reddit = praw.Reddit(
 
 
 
-keyword = ['learn python', 'learn a python language',
+keyword = ['learn python', 'learn a python language', 'how to start', 'how to learn python',
            'best way to learn python', ('python', 'course', 'beginner'), ('beginner', 'course')]
 
 subreddit = reddit.subreddit("learnpython")
@@ -29,8 +29,9 @@ for post in subreddit.new(limit=200):
                     text_file.write(post.id)
                     text_file.close()
                     print(post.id)
-                    post.reply("[Here you go](https://www.reddit.com/r/learnpython/wiki/index/#wiki_new_to_programming.3F)\n\n This reply was made by a bot. You can check my code [Here](https://github.com/SohrabFarjami/RedditCourseBot)")
+                    post.reply("[Here you go](https://www.reddit.com/r/learnpython/wiki/index/#wiki_new_to_programming.3F)\n\n This reply was made by a bot.\nYou can check my code [Here](https://github.com/SohrabFarjami/RedditCourseBot)")
                     time.sleep(660)
                     
                 else:
                      print('Already checked')
+
